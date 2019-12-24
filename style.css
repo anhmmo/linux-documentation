@@ -27,12 +27,6 @@ body{
     color: var(--color-gray);
 }
 
-h1{
-    text-align: center;
-    padding: 2rem 0.5rem;
-}
-
-
 .menu-tab{
     max-width: 20vw;
     width: 100%;
@@ -40,14 +34,44 @@ h1{
     position: fixed;
     height: 100%;
     border-right: 3px solid rgb(160, 158, 158);
-    
 }
+
+
+.menu-tab h1{
+    text-align: center;
+    padding: 2rem 0.5rem;
+}
+
+.menu-tab-list li{
+    list-style: none;
+    padding: 1rem 0 1rem 1rem;
+    border-top: 2px solid var(--color-red);
+   }
+   
+   .menu-tab-list li:hover a{
+       background-color: var(--color-tomato);
+       color: white;
+       transition: all 500ms ease-in;
+      }
+   
+   .menu-tab-list li a{
+       text-decoration: none;
+       color: var(--color-gray);
+       margin-left: 0.8rem;
+       padding: 1rem;
+       cursor: pointer;
+       border-radius: 0.5rem;
+      }
 
 .main-content{
     max-width: 78vw;
     width: 100%;
     float: right;
     padding: 2rem;
+}
+
+.main-content h2{
+    padding: 2rem 0 0 0;
 }
 
 .main-content p{
@@ -60,30 +84,49 @@ h1{
 
 .main-content code{
     display: block;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     margin-left: 5rem;
     background-color: rgb(241, 241, 241);
     border-radius: 0.5rem;
 }
 
-.menu-tab-list li{
- list-style: none;
- padding: 1rem 0 1rem 1rem;
- border-top: 2px solid var(--color-red);
+
+@media(max-width: 1300px){
+    .menu-tab{
+        max-width: 29vw;
+    }
+
+    .main-content{
+        max-width: 71vw;
+    }
+    
 }
 
-.menu-tab-list li:hover a{
-    background-color: var(--color-tomato);
-    color: white;
-    transition: all 500ms ease-in;
-   }
+@media(max-width: 900px){
+    .menu-tab{
+        float: none;
+        max-width: 100vw;
+        width: 100%;
+        position: relative;
+        max-height: 220px;
+        overflow-y: scroll;
+        border-bottom: 3px solid rgb(160, 158, 158);
+    }
 
-.menu-tab-list li a{
-    text-decoration: none;
-    color: var(--color-gray);
-    margin-left: 0.8rem;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 0.5rem;
-   }
+    .main-content{
+        float: none;
+        max-width: 100vw;
+        width: 100%;
+       
+    }
+
+    .main-content code{
+        
+        margin-left: 0;
+      
+    }
+    
+}
+
+
 
